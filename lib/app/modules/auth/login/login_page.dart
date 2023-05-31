@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sign_in_button/sign_in_button.dart';
+import 'package:todo_list_provider/app/core/widget/todo_list_field.dart';
 import 'package:todo_list_provider/app/core/widget/todo_list_logo.dart';
 
 class LoginPage extends StatelessWidget {
@@ -26,11 +27,16 @@ class LoginPage extends StatelessWidget {
                       child: Form(
                           child: Column(
                         children: [
-                          TextFormField(),
+                          TodoListField(
+                            label: 'E-mail',
+                          ),
                           const SizedBox(
                             height: 20,
                           ),
-                          TextFormField(),
+                          TodoListField(
+                            label: 'Senha',
+                            obscureText: true,
+                          ),
                           const SizedBox(
                             height: 10,
                           ),
